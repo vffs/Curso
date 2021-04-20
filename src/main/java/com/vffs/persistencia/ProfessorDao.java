@@ -27,7 +27,7 @@ public class ProfessorDao implements Dao<Professor> {
 
         try {
             Statement statement = this.conexao.createStatement();
-            statement.execute("CREATE TABLE IF NOT EXISTS professor(id BIGSERIAL, nome VARCHAR(255), idade INTEGER, PRMARY KEY (id));");
+            statement.execute("CREATE TABLE IF NOT EXISTS professor(id BIGSERIAL, nome VARCHAR(255), idade INTEGER, PRIMARY KEY (id));");
         } catch (SQLException ex) {
             System.out.println("Código erro" + ex.getErrorCode());
             System.out.println(ex.getMessage());
